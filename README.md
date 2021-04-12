@@ -1,6 +1,6 @@
 # XRay_detection
 
-Current solution does not achieve SOTA results. Current best evaluation metric is 0.22 mAP (all classes treated as one and the result is measured only on first fold, since 5-fold cross-val was tooo time-consuming). IOUs are (0.25, 0.5, 0.05).
+Current solution does not achieve SOTA results. Current best evaluation metric is 0.22 mAP (all classes treated as one and the result is measured only on first fold, since 5-fold cross-val was tooo time-consuming). IOUs are (0.25, 0.5, step=0.05).
 
 The reasons of this are that the dataset was very small despite the fact it was expanded with 3.3k images from VinBigData chest XRay kaggle competition (https://www.kaggle.com/c/vinbigdata-chest-xray-abnormalities-detection). Classes Mass/Nodule were put together to match the mark in the kaggle dataset.
 
