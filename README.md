@@ -15,3 +15,8 @@ Since the purpose of pipeline was not to achieve SOTA results, there are some wo
 8) Try different backbones.
 9) Surf internet to find even more train data. (Since before adding 3.3k images from kaggle the mAP metric didn't exceed 0.1).
 10) Also it is a good idea to add Stratified k-fold:) instead of just k-fold.
+
+Example of command to start training:
+python3 main.py --input_dir ../data/all_images --batch_size 16 --use_cuda --mode train --input_mark ../data/train_merged.csv --seed 42 --num_epochs 1000 --print_stats --push_visualizations --num_workers 8 --use_augmentations --iou_save_threshold 0.05 --checkpoint_dir ../checkpoints --test_image_dir ../data/test_images --test_output_df_path ./answer.csv --load_checkpoint ./Faster_rcnn_precision_0.1346_fold_0_seed_42
+
+Be aware that option push_visualizations requires visdom to be installed and started manually.
